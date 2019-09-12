@@ -66,7 +66,7 @@ function shareOriginal()
 {
   $('meta[property="og:title"]').replaceWith('<meta property="og:title" content="New Title">');
 
-FB.api('post', { id: 'https://joakodaurat.github.io/sharingfacebook/',scrape:true }, function(response) {
+FB.api('363398301275047', 'post', {scrape:true }, function(response) {
   if (!response || response.error) {
     alert('Error occured');
   } else {
