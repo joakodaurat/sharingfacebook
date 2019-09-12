@@ -66,12 +66,21 @@ function shareOriginal()
 {
   $('meta[property="og:title"]').replaceWith('<meta property="og:title" content="New Title">');
 
-FB.api('363398301275047', 'post', {id:'https://joakodaurat.github.io/sharingfacebook/',scrape:true }, function(response) {
-  if (!response || response.error) {
-    alert('Error occured');
-  } else {
-    alert('Post ID: ' + response.id);
-  }
+$.ajax( {                                    
+    url : "https://graph.facebook.com/",
+    type : "POST",
+    data : "id={https://joakodaurat.github.io/sharingfacebook}/&scrape=true",
+    cache : false,
+    success : function(res) {
+        if (!response || response.error) {
+           alert("Couldn't Publish Data");
+        } else {
+           alert("Message successfully posted to your wall");
+        }
+    },
+    error : function(xhr, textStatus, errorThrown) {
+        alert(xhr.responseText);
+    }
 });
 
   FB.ui({
