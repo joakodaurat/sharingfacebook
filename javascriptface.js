@@ -69,7 +69,7 @@ function shareOriginal()
 $.ajax( {                                    
     url : "https://graph.facebook.com/",
     type : "POST",
-    data : "id={https://joakodaurat.github.io/sharingfacebook}/&scrape=true",
+    data : "id=https://joakodaurat.github.io/sharingfacebook/&scrape=true",
     cache : false,
     success : function(res) {
         if (!response || response.error) {
