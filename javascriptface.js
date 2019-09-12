@@ -67,7 +67,7 @@ function shareOriginal()
   $('meta[property="og:title"]').replaceWith('<meta property="og:title" content="New Title">');
 
 $.ajax( {                                    
-    url : "https://graph.facebook.com/?access_token="363398301275047|BxbkjLPgzuhg7ARofz2Ok3tnpV0"",
+    url : "https://graph.facebook.com/?access_token=363398301275047|BxbkjLPgzuhg7ARofz2Ok3tnpV0",
     type : "POST",
     data : "id=https://joakodaurat.github.io/sharingfacebook/&scrape=true",
     cache : false,
